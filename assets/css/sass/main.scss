@@ -1,0 +1,65 @@
+@import 'compass/css3';
+@import 'variables';
+@import 'header';
+@import 'form';
+@import 'title';
+@import 'footer';
+@import 'button';
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+body {
+	@extend %font-default;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	@extend %font-default;
+	margin-bottom: 22px;
+	color: $color-dark;
+}
+
+p {
+	font-size: 20px;
+}
+
+a,
+a:hover {
+	@extend %transition;
+}
+
+.border-none {
+	border: none !important;
+}
+
+.wrap-default {
+	@extend %flexbox;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 90px 0;
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+
+	@include media(lg) {
+		padding: 120px 0;
+	}
+}
+
+
+.break-txt {
+	color: $color-dark;
+	word-break: break-word;
+}
+
+.page-404 {
+	h1 {
+		color: #292929;
+		font-size: 7rem;
+	}
+}

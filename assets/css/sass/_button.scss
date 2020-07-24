@@ -1,0 +1,17 @@
+.btn-default {
+  border: 2px solid $color-default;
+  background-color: $color-default;
+  color: $color-light !important;
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 10px 32px;
+  cursor: pointer;
+  text-decoration: none !important;
+  display: inline-block;
+
+  &:hover {
+    background-color: darken($color-default, 10%);
+    border-color: darken($color-default, 10%);
+    color: $color-light !important;
+  }
+}

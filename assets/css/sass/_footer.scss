@@ -1,0 +1,20 @@
+.footer-wrap {
+  border-top: 1px solid #dedede;
+  background: $color-light;
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
+  width: 100%;
+  padding: 30px 0;
+  z-index: 0;
+
+  p {
+    color: #777676;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  a {
+    color: #777676;
+  }
+}
