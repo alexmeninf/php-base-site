@@ -4,7 +4,7 @@ define("SITE_DESCRIPTION",  "");
 define("SITE_LANGUAGE",     "pt-BR");
 define("SITE_NAME",         "Template padrão");
 define("TEMPLATE_VERSION",  "1.0");
-define("LOCAL_URL",         "http://localhost/www/themes/landing-page-default");
+define("LOCAL_URL",         ".");
 
 
 /**
