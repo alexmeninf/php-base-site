@@ -4,9 +4,8 @@ require 'inc/config.php';
 
 
 function get_includes_head() {
-	get_og_protocol(); ?>
-	<link href="<?= get_icon_url() ?>" rel="shortcut icon">
-	
+	get_head_tags(); ?>
+
 	<link rel="stylesheet" type="text/css" href="<?= get_url() ?>/assets/css/bootstrap/bootstrap.css">
 	<!-- 
 	<link rel="stylesheet" type="text/css" href="<?= get_url() ?>/assets/plugins/wow/css/animate.css">
