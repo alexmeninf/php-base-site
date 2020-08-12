@@ -8,9 +8,10 @@
  */
 function get_head_tags( $show = true ) {
   if ( $show ) {
+    mobile_web_app();
     get_tags_og_protocol();
     get_tags_theme_color( THEME_COLOR );
-    get_favicon_icons();
+    get_favicon_icons(false);
     get_link_canonical();
   }
 }
@@ -28,6 +29,9 @@ function get_bloginfo( $show ) {
   switch ( $show ) {
     case 'name':
       $output = SITE_NAME;
+    break;
+    case 'short_name':
+      $output = APP_SHORT_NAME;
     break;
     case 'description':
       $output = SITE_DESCRIPTION;
@@ -128,6 +132,22 @@ function get_icon_url( $img = 'favicon.png', $path = '' ) {
 
 
 /**
+ * Support to webApp
+ *
+ * @since 1.0
+ */
+function mobile_web_app() {
+  echo '<link rel="manifest" href="'.get_url().'/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="'.get_bloginfo('short_name').'">
+    <meta name="apple-mobile-web-app-title" content="'.get_bloginfo('name').'">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="'.get_url().'">
+  ';
+}
+
+/**
  * Get Open Graph Protocol tags
  * Note: og:image need to set an image with a resolution of 1200x630 pixels
  *
@@ -137,7 +157,7 @@ function get_tags_og_protocol() {
   echo '<meta property="og:description" content="'. get_bloginfo( "description" ) .'">
     <meta property="og:image" content="'. get_icon_url("og-image.jpg", "favicon") .'">
     <meta property="og:locale" content="'. get_bloginfo( "language" ) .'">
-    <meta property="og:site_name" content="'. get_bloginfo( "name" ) .'">
+    <meta property="og:site_name" content="'. get_bloginfo( "short_name" ) .'">
     <meta property="og:title" content="'. get_bloginfo( "name" ) .'">  
     <meta property="og:type" content="website">
     <meta property="og:url" content="'. get_bloginfo( "url" ) .'">';
@@ -183,7 +203,8 @@ function get_favicon_icons( $all = false ) {
   echo '<link href="'. get_icon_url() .'" rel="shortcut icon">';
 
   if ( $all ) {
-    echo '<link rel="apple-touch-icon" sizes="57x57" href="'. get_icon_url('apple-icon-57x57.png', 'favicon') .'">
+    echo '<meta name="msapplication-TileImage" content="'. get_icon_url('ms-icon-144x144.png">', 'favicon') .'">
+    <link rel="apple-touch-icon" sizes="57x57" href="'. get_icon_url('apple-icon-57x57.png', 'favicon') .'">
     <link rel="apple-touch-icon" sizes="60x60" href="'. get_icon_url('apple-icon-60x60.png', 'favicon') .'">
     <link rel="apple-touch-icon" sizes="72x72" href="'. get_icon_url('apple-icon-72x72.png', 'favicon') .'">
     <link rel="apple-touch-icon" sizes="76x76" href="'. get_icon_url('apple-icon-76x76.png', 'favicon') .'">
@@ -195,9 +216,7 @@ function get_favicon_icons( $all = false ) {
     <link rel="icon" type="image/png" sizes="192x192"  href="'. get_icon_url('android-icon-192x192.png', 'favicon') .'">
     <link rel="icon" type="image/png" sizes="32x32" href="'. get_icon_url('favicon-32x32.png', 'favicon') .'">
     <link rel="icon" type="image/png" sizes="96x96" href="'. get_icon_url('favicon-96x96.png', 'favicon') .'">
-    <link rel="icon" type="image/png" sizes="16x16" href="'. get_icon_url('favicon-16x16.png', 'favicon') .'">
-    <link rel="manifest" href="'. get_icon_url('manifest.json', 'favicon') .'">
-    <meta name="msapplication-TileImage" content="'. get_icon_url('ms-icon-144x144.png">', 'favicon') .'">';
+    <link rel="icon" type="image/png" sizes="16x16" href="'. get_icon_url('favicon-16x16.png', 'favicon') .'">';
   }
 }
 
