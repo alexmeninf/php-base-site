@@ -3,6 +3,7 @@
 define("SITE_DESCRIPTION",  "");
 define("SITE_LANGUAGE",     "pt-BR");
 define("SITE_NAME",         "Template padrão");
+define("APP_SHORT_NAME",    "My App");
 define("SITE_VERSION",      "1.0");
 define("LOCAL_URL",         ".");
 define("THEME_COLOR",       "");
