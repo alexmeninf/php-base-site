@@ -9,6 +9,7 @@ define("LOCAL_URL",         ".");
 define("THEME_COLOR",       "");
 
 
+require 'inc/head_tags.php';
 require 'inc/config.php';
 
 

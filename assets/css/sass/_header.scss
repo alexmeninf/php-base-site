@@ -1,36 +1,18 @@
 .fix-header {
   position: fixed;
   top: -100%;
-  width: 90%;
+  width: 100%;
   z-index: 1000;
-  padding: 0;
   background-color: $color-light;
   box-shadow: 0 0 11px rgba(43, 43, 43, 0.4);
   justify-content: space-between;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  left: 50%;
-  transform: translateX(-50%);
-  border-bottom-right-radius: 22px;
-  border-bottom-left-radius: 22px;
+  left: 0;
   @extend %transition;
 
-  @include media(md) {
-    width: 75%;
-  }
-
   @include media(lg) {
-    width: 65%;
     padding: 0 30px;
-    background: rgba(255, 251, 251, 0.74);
-
-    &:hover {
-      background-color: $color-light;
-    }
-  }
-
-  @include media(xl) {
-    width: 55%;
   }
 
   .box-logo {
