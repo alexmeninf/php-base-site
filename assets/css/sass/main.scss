@@ -1,36 +1,12 @@
 @import 'compass/css3';
 @import 'variables';
+@import 'global';
 @import 'header';
 @import 'form';
 @import 'title';
 @import 'footer';
 @import 'button';
 
-// fonts
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
-
-body {
-	@extend %font-default;
-	overflow-x: hidden;
-}
-
-h1,
-h2,
-h3,
-h4 {
-	@extend %font-default;
-	margin-bottom: 22px;
-	color: $color-dark;
-}
-
-a,
-a:hover {
-	@extend %transition;
-}
-
-.border-none {
-	border: none !important;
-}
 
 .wrap-default {
 	@extend %flexbox;
