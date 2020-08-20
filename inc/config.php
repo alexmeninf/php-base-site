@@ -1,10 +1,11 @@
 <?php
 
+
 /**
- * Get head tags
+ * get_head_tags
  *
- * @since 1.0
- * @param string $show default is true
+ * @param  mixed $show
+ * @return void
  */
 function get_head_tags( $show = true ) {
   if ( $show ) {
@@ -54,12 +55,12 @@ function get_bloginfo( $show ) {
 }
 
 
+
 /**
- * Displays the information about the current site.
- * 
- * @since 1.0
- * 
- * @param string $show  Optional. Site info to retrieve. Default empty (site name).
+ * bloginfo
+ *
+ * @param  string $show
+ * @return string
  */
 function bloginfo( $show ) {
   echo get_bloginfo( $show );
