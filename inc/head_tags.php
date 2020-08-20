@@ -61,7 +61,7 @@ function get_favicon_icons( $icons = 'shortcut' ) {
   echo '<link href="'. get_icon_url() .'" rel="shortcut icon">';
 
   if ( $icons == 'all' ) {
-    echo '<meta name="msapplication-TileImage" content="'. get_icon_url('ms-icon-144x144.png">', 'favicons') .'">
+    echo '<meta name="msapplication-TileImage" content="'. get_icon_url('ms-icon-144x144.png', 'favicons') .'">
     <link rel="apple-touch-icon" sizes="57x57" href="'. get_icon_url('apple-icon-57x57.png', 'favicons') .'">
     <link rel="apple-touch-icon" sizes="60x60" href="'. get_icon_url('apple-icon-60x60.png', 'favicons') .'">
     <link rel="apple-touch-icon" sizes="72x72" href="'. get_icon_url('apple-icon-72x72.png', 'favicons') .'">
