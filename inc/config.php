@@ -13,6 +13,7 @@ function get_head_tags( $show = true ) {
     get_tags_theme_color( THEME_COLOR );
     get_favicon_icons('shortcut'); // set "all" to get all icons
     get_link_canonical();
+    set_google_analytics('', false);
   }
 }
 
@@ -147,4 +148,38 @@ function is_simple_string( $string ) {
   }
 
   return true;
+}
+
+
+/**
+ * Google analytics
+ * 
+ * @since 1.0 
+ * @param $id required. Set the tracking id
+ * @param $show optional. show the code
+ * @return string
+ */
+function set_google_analytics($id, $show = false) {
+
+  if ($show && !is_localhost()) {
+    echo '<!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id='. $id .'"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "'. $id .'");
+      </script>';
+  }
+}
+
+
+/**
+ * Check is localhost
+ * 
+ * @since 1.0
+ * @return boolean
+ */
+function is_localhost() {
+  return !!strstr($_SERVER["HTTP_HOST"], 'localhost');
 }
