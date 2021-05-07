@@ -1,24 +1,9 @@
-@import 'compass/css3';
-@import 'variables';
-@import 'global';
-@import 'header';
-@import 'form';
-@import 'title';
-@import 'footer';
-@import 'button';
-
-
-.wrap-default {
-	@extend %flexbox;
-	align-items: center;
-	flex-wrap: wrap;
-	justify-content: center;
-	padding: 90px 0;
-	position: relative;
-	overflow: hidden;
-	min-height: 100vh;
-
-	@include media(lg) {
-		padding: 120px 0;
-	}
-}
+// @import "compass/css3";
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "variables";
+@import "global";
+// @import "plugins";
+@import "utilities";
+@import "components";
+@import "template_parts";

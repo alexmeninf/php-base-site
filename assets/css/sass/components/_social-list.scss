@@ -1,0 +1,30 @@
+.social-list {
+
+  li {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    a {
+      align-items: center;
+      border-radius: 100%;
+      border: 1px solid $gray-800;
+      color: $body-color;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      width: 40px;
+      @extend %transition;
+
+      &:hover {
+        background: $gray-800;
+        color: $white;
+        transform: translateY(-5px);
+      }
+    }
+  }
+}

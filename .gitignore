@@ -1,3 +1,4 @@
 .sass-cache/
-*.css.map
-C:\\temp\\sass
+assets/**/*.css.map
+assets/**/*.scssc
+node_modules/

@@ -1,0 +1,15 @@
+.sidebar-archives {
+  li {
+    a {
+      border-bottom: 1px solid $border-color;
+      color: $body-color;
+      display: block;
+      padding: 10px;
+
+      &:hover {
+        background-color: #fbfbfb;
+        color: $color-default;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.btn-theme {
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  display: inline-block;
+  font-size: calc(1.05rem + 0.35vw);
+  font-weight: 700;
+  text-decoration: unset;
+  user-select: none;
+  padding: 0.65em 1.1em;
+  margin: 0.25rem 0;
+  vertical-align: middle;
+
+  > i {
+    font-size: 150%;
+    vertical-align: middle;
+  }
+
+  // aplique o background, cor e hover aqui abaixo
+  @include buttonColor($color-default, $white, "lighten", 10%);
+}

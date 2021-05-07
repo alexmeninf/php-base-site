@@ -1,0 +1,9 @@
+.categories-post {
+  border-bottom: 1px solid $border-color;
+  padding: ($default-spacing-y / 4) 0;
+  margin-bottom: $default-spacing-y / 2;
+
+  a {
+    color: $color-default;
+  }
+}

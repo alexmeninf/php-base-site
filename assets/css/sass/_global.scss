@@ -1,25 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
-
-
-html,
-body {
-  background-color: $bg-base;
-  color: $color-base;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
+* {
+  outline: none !important;
 }
 
-a {
-  @extend %transition;
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $gray-500;
+  border-radius: 5px;
+  border: 1px solid $body-bg;
 
   &:hover {
-    @extend %transition;
+    background-color: $gray-600;
   }
 }
 
+a,
+button {
+  @extend %transition;
+}
 
-section,
-footer {
-  padding: $default-spacing-y $default-spacing-x;
+p {
+  font-size: calc(1rem + 0.2vw);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Espaço entre as sessões
+.spacing {
+  padding: ($default-spacing-y / 2) $default-spacing-x;
+
+  @include media(lg) {
+    padding: $default-spacing-y $default-spacing-x;
+  }
+}
+
+.text-default {
+  color: $color-default !important;
 }

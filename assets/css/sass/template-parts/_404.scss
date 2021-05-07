@@ -1,0 +1,9 @@
+.page-404 {
+  position: relative;
+  z-index: 1;
+
+  .title {
+    font-size: calc(9em + 2.5vw);
+    line-height: 1;
+  }
+} 
